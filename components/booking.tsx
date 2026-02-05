@@ -3,21 +3,7 @@
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Calendar, Clock, Video, MapPin } from "lucide-react"
-
-const bookingOptions = [
-  {
-    icon: Video,
-    title: "Sesión Online",
-    duration: "50 minutos",
-    description: "Sesión virtual por videollamada desde cualquier lugar.",
-  },
-  {
-    icon: MapPin,
-    title: "Sesión Presencial",
-    duration: "50 minutos",
-    description: "Sesión en consultorio en un espacio cómodo y privado.",
-  },
-]
+import { useLanguage } from "@/lib/i18n/language-context"
 
 // IMPORTANTE: Reemplaza esta URL con tu enlace de Google Calendar Appointment Scheduling
 // Para configurarlo:
@@ -28,20 +14,35 @@ const bookingOptions = [
 const GOOGLE_CALENDAR_BOOKING_URL = "https://calendar.google.com/calendar/appointments/schedules/AcZssZ1234567890"
 
 export function Booking() {
+  const { t } = useLanguage()
+
+  const bookingOptions = [
+    {
+      icon: Video,
+      title: t.booking.options.online.title,
+      duration: t.booking.options.online.duration,
+      description: t.booking.options.online.description,
+    },
+    {
+      icon: MapPin,
+      title: t.booking.options.inPerson.title,
+      duration: t.booking.options.inPerson.duration,
+      description: t.booking.options.inPerson.description,
+    },
+  ]
+
   return (
     <section id="agendar" className="py-20 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-sm tracking-widest uppercase text-primary mb-4">
-            Reserva tu cita
+            {t.booking.subtitle}
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-foreground">
-            Agenda tu primera sesión
+            {t.booking.title}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Selecciona el horario que mejor se adapte a tu disponibilidad.
-            La primera sesión es una oportunidad para conocernos y evaluar
-            cómo puedo ayudarte.
+            {t.booking.description}
           </p>
         </div>
 
@@ -82,11 +83,11 @@ export function Booking() {
               rel="noopener noreferrer"
             >
               <Calendar className="mr-3 h-5 w-5" />
-              Ver disponibilidad y agendar
+              {t.booking.cta}
             </a>
           </Button>
           <p className="mt-4 text-sm text-muted-foreground">
-            Serás redirigido a Google Calendar para seleccionar tu horario
+            {t.booking.redirect}
           </p>
         </div>
       </div>

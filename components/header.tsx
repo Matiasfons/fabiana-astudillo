@@ -3,18 +3,20 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
-
-const navigation = [
-  { name: "Inicio", href: "#" },
-  { name: "Sobre mí", href: "#sobre-mi" },
-  { name: "Terapias", href: "#terapias" },
-  { name: "Servicios", href: "#servicios" },
-  { name: "Agendar", href: "#agendar" },
-  { name: "Contacto", href: "#contacto" },
-]
+import { LanguageSelector } from "./language-selector"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+  const { t } = useLanguage()
+
+  const navigation = [
+    { name: t.nav.about, href: "#sobre-mi" },
+    { name: t.nav.training, href: "#formacion" },
+    { name: t.nav.specialties, href: "#especialidades" },
+    { name: t.nav.services, href: "#servicios" },
+    { name: t.nav.contact, href: "#contacto" },
+  ]
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border/50">
@@ -24,7 +26,7 @@ export function Header() {
         </a>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-8">
+        <div className="hidden lg:flex items-center gap-6">
           {navigation.map((item) => (
             <a
               key={item.name}
@@ -34,35 +36,37 @@ export function Header() {
               {item.name}
             </a>
           ))}
+          <LanguageSelector />
           <Button
             size="sm"
             className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
             asChild
           >
-            <a href="#agendar">
-              Agendar cita
-            </a>
+            <a href="#agendar">{t.nav.bookAppointment}</a>
           </Button>
         </div>
 
-        {/* Mobile Menu Button */}
-        <button
-          type="button"
-          className="md:hidden p-2 text-foreground"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
-        >
-          {mobileMenuOpen ? (
-            <X className="h-6 w-6" />
-          ) : (
-            <Menu className="h-6 w-6" />
-          )}
-        </button>
+        {/* Mobile: Language selector + Menu button */}
+        <div className="lg:hidden flex items-center gap-3">
+          <LanguageSelector />
+          <button
+            type="button"
+            className="p-2 text-foreground"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-label={mobileMenuOpen ? "Cerrar menú" : "Abrir menú"}
+          >
+            {mobileMenuOpen ? (
+              <X className="h-6 w-6" />
+            ) : (
+              <Menu className="h-6 w-6" />
+            )}
+          </button>
+        </div>
       </nav>
 
       {/* Mobile Navigation */}
       {mobileMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border">
+        <div className="lg:hidden bg-background border-b border-border">
           <div className="container mx-auto px-4 py-4 space-y-4">
             {navigation.map((item) => (
               <a
@@ -78,11 +82,8 @@ export function Header() {
               className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
               asChild
             >
-              <a
-                href="#agendar"
-                onClick={() => setMobileMenuOpen(false)}
-              >
-                Agendar cita
+              <a href="#agendar" onClick={() => setMobileMenuOpen(false)}>
+                {t.nav.bookAppointment}
               </a>
             </Button>
           </div>

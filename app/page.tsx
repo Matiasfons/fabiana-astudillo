@@ -1,7 +1,9 @@
 import { Header } from "@/components/header"
 import { Hero } from "@/components/hero"
 import { About } from "@/components/about"
+import { Credentials } from "@/components/credentials"
 import { ThirdGenTherapies } from "@/components/third-gen-therapies"
+import { Specialties } from "@/components/specialties"
 import { Services } from "@/components/services"
 import { Booking } from "@/components/booking"
 import { CTA } from "@/components/cta"
@@ -14,7 +16,9 @@ export default function Page() {
       <main className="pt-16">
         <Hero />
         <About />
+        <Credentials />
         <ThirdGenTherapies />
+        <Specialties />
         <Services />
         <Booking />
         <CTA />

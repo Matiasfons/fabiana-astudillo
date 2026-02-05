@@ -1,17 +1,21 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Instagram } from "lucide-react"
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function CTA() {
+  const { t } = useLanguage()
+
   return (
     <section className="py-20 lg:py-32 bg-primary text-primary-foreground">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-balance">
-            Si estás buscando acompañamiento profesional, estoy aquí para ti
+            {t.cta.title}
           </h2>
           <p className="text-lg opacity-90 mb-10 max-w-xl mx-auto">
-            Da el primer paso hacia tu bienestar. Agenda una cita y comencemos
-            este camino juntos.
+            {t.cta.description}
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -25,7 +29,7 @@ export function CTA() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                Agenda por WhatsApp
+                {t.cta.whatsapp}
                 <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
@@ -41,7 +45,7 @@ export function CTA() {
                 rel="noopener noreferrer"
               >
                 <Instagram className="mr-2 h-4 w-4" />
-                Sígueme en Instagram
+                {t.cta.instagram}
               </a>
             </Button>
           </div>

@@ -1,50 +1,47 @@
+"use client"
+
 import { Sparkles, Heart, Target, Leaf } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
-
-const therapyApproaches = [
-  {
-    icon: Heart,
-    title: "Terapia de Aceptación y Compromiso (ACT)",
-    description:
-      "Aprende a aceptar tus emociones mientras te comprometes con acciones alineadas a tus valores personales.",
-  },
-  {
-    icon: Target,
-    title: "Terapia Dialéctica Conductual (DBT)",
-    description:
-      "Desarrolla habilidades de regulación emocional, tolerancia al malestar y relaciones interpersonales efectivas.",
-  },
-  {
-    icon: Leaf,
-    title: "Mindfulness",
-    description:
-      "Cultiva la atención plena para conectar con el momento presente y reducir el estrés y la ansiedad.",
-  },
-  {
-    icon: Sparkles,
-    title: "Activación Conductual",
-    description:
-      "Reconecta con actividades significativas que mejoran tu estado de ánimo y calidad de vida.",
-  },
-]
+import { useLanguage } from "@/lib/i18n/language-context"
 
 export function ThirdGenTherapies() {
+  const { t } = useLanguage()
+
+  const therapyApproaches = [
+    {
+      icon: Heart,
+      title: t.therapies.approaches.act.title,
+      description: t.therapies.approaches.act.description,
+    },
+    {
+      icon: Target,
+      title: t.therapies.approaches.dbt.title,
+      description: t.therapies.approaches.dbt.description,
+    },
+    {
+      icon: Leaf,
+      title: t.therapies.approaches.mindfulness.title,
+      description: t.therapies.approaches.mindfulness.description,
+    },
+    {
+      icon: Sparkles,
+      title: t.therapies.approaches.activation.title,
+      description: t.therapies.approaches.activation.description,
+    },
+  ]
+
   return (
     <section id="terapias" className="py-20 lg:py-32 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
           <p className="text-sm tracking-widest uppercase text-primary mb-4">
-            Enfoque Terapéutico
+            {t.therapies.subtitle}
           </p>
           <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-foreground">
-            Terapias de Tercera Generación
+            {t.therapies.title}
           </h2>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            Las terapias de tercera generación representan la evolución más reciente
-            en psicología clínica. A diferencia de enfoques anteriores que buscan
-            eliminar síntomas, estas terapias se centran en cambiar tu relación con
-            los pensamientos y emociones, promoviendo la aceptación, la flexibilidad
-            psicológica y una vida con propósito.
+            {t.therapies.description}
           </p>
         </div>
 
@@ -73,14 +70,10 @@ export function ThirdGenTherapies() {
           <Card className="border-primary/20 bg-primary/5">
             <CardContent className="p-8 text-center">
               <h3 className="font-serif text-xl font-medium mb-4 text-foreground">
-                ¿Por qué elegir este enfoque?
+                {t.therapies.whyChoose.title}
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Estas terapias cuentan con amplia evidencia científica y son especialmente
-                efectivas para el manejo de ansiedad, depresión, estrés, trastornos
-                alimentarios y dificultades en relaciones interpersonales. Mi objetivo es
-                ayudarte a construir una vida rica y significativa, incluso en presencia
-                de emociones difíciles.
+                {t.therapies.whyChoose.description}
               </p>
             </CardContent>
           </Card>
