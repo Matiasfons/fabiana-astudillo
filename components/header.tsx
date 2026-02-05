@@ -7,7 +7,9 @@ import { Menu, X } from "lucide-react"
 const navigation = [
   { name: "Inicio", href: "#" },
   { name: "Sobre mí", href: "#sobre-mi" },
+  { name: "Terapias", href: "#terapias" },
   { name: "Servicios", href: "#servicios" },
+  { name: "Agendar", href: "#agendar" },
   { name: "Contacto", href: "#contacto" },
 ]
 
@@ -37,11 +39,7 @@ export function Header() {
             className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
             asChild
           >
-            <a
-              href="https://wa.me/593999999999"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <a href="#agendar">
               Agendar cita
             </a>
           </Button>
@@ -81,9 +79,8 @@ export function Header() {
               asChild
             >
               <a
-                href="https://wa.me/593999999999"
-                target="_blank"
-                rel="noopener noreferrer"
+                href="#agendar"
+                onClick={() => setMobileMenuOpen(false)}
               >
                 Agendar cita
               </a>

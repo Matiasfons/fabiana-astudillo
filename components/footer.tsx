@@ -19,20 +19,20 @@ export function Footer() {
             <h4 className="font-medium mb-4 text-foreground">Contacto</h4>
             <div className="space-y-3">
               <a
-                href="mailto:contacto@fabianaastudillo.com"
+                href="mailto:fabianaastudillo.abad@gmail.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4" />
-                contacto@fabianaastudillo.com
+                fabianaastudillo.abad@gmail.com
               </a>
               <a
-                href="https://wa.me/593999999999"
+                href="https://wa.me/593959744465"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Phone className="w-4 h-4" />
-                WhatsApp
+                +593 95 974 4465
               </a>
               <a
                 href="https://instagram.com/fabianaastudillo.psicologa"
