@@ -2,7 +2,7 @@
 
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Award, MapPin, Video } from "lucide-react"
+import { ArrowRight, Award, Calendar, MapPin, Video } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 export function Hero() {
@@ -44,7 +44,12 @@ export function Hero() {
                 className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-full px-8"
                 asChild
               >
-                <a href="#agendar">
+                <a
+                  href="https://outlook.office.com/book/AgendaFabianaAstudillo@fabianaastudillo.com/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Calendar className="mr-2 h-4 w-4" />
                   {t.hero.bookCta}
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>

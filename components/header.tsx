@@ -42,7 +42,13 @@ export function Header() {
             className="rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
             asChild
           >
-            <a href="#agendar">{t.nav.bookAppointment}</a>
+            <a
+              href="https://outlook.office.com/book/AgendaFabianaAstudillo@fabianaastudillo.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              {t.nav.bookAppointment}
+            </a>
           </Button>
         </div>
 
@@ -82,7 +88,12 @@ export function Header() {
               className="w-full rounded-full bg-primary text-primary-foreground hover:bg-primary/90"
               asChild
             >
-              <a href="#agendar" onClick={() => setMobileMenuOpen(false)}>
+              <a
+                href="https://outlook.office.com/book/AgendaFabianaAstudillo@fabianaastudillo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setMobileMenuOpen(false)}
+              >
                 {t.nav.bookAppointment}
               </a>
             </Button>

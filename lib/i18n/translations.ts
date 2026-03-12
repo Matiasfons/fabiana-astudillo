@@ -243,14 +243,18 @@ export const translations = {
         },
       },
       cta: "Ver disponibilidad y agendar",
-      redirect: "Serás redirigido a Google Calendar para seleccionar tu horario",
+      loading: "Cargando calendario...",
+      calendarTitle: "Agenda de citas - Psic. Fabiana Astudillo",
+      openExternal: "Abrir en ventana nueva",
+      redirect: "Si el calendario no carga, ábrelo en una ventana nueva",
     },
     // CTA
     cta: {
       title: "Si estás buscando acompañamiento profesional, estoy aquí para ti",
       description:
         "Da el primer paso hacia tu bienestar. Agenda una cita y comencemos este camino juntos.",
-      whatsapp: "Agenda por WhatsApp",
+      bookNow: "Agenda tu cita",
+      whatsapp: "Escríbeme por WhatsApp",
       instagram: "Sígueme en Instagram",
     },
     // Footer
@@ -511,14 +515,18 @@ export const translations = {
         },
       },
       cta: "View availability and book",
-      redirect: "You will be redirected to Google Calendar to select your time",
+      loading: "Loading calendar...",
+      calendarTitle: "Appointment Calendar - Psic. Fabiana Astudillo",
+      openExternal: "Open in new window",
+      redirect: "If the calendar doesn't load, open it in a new window",
     },
     // CTA
     cta: {
       title: "If you're looking for professional support, I'm here for you",
       description:
         "Take the first step towards your well-being. Book an appointment and let's start this journey together.",
-      whatsapp: "Book via WhatsApp",
+      bookNow: "Book your appointment",
+      whatsapp: "Message on WhatsApp",
       instagram: "Follow me on Instagram",
     },
     // Footer

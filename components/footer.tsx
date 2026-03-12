@@ -34,11 +34,11 @@ export function Footer() {
             <h4 className="font-medium mb-4 text-foreground">{t.footer.contact}</h4>
             <div className="space-y-3">
               <a
-                href="mailto:fabianaastudillo.abad@gmail.com"
+                href="mailto:info@fabianaastudillo.com"
                 className="flex items-center gap-3 text-muted-foreground hover:text-primary transition-colors"
               >
                 <Mail className="w-4 h-4 shrink-0" />
-                <span className="text-sm break-all">fabianaastudillo.abad@gmail.com</span>
+                <span className="text-sm break-all">info@fabianaastudillo.com</span>
               </a>
               <a
                 href="https://wa.me/593959744465"

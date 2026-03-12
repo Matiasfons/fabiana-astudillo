@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Instagram } from "lucide-react"
+import { ArrowRight, Calendar, Instagram } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
 
 export function CTA() {
@@ -25,12 +25,27 @@ export function CTA() {
               asChild
             >
               <a
+                href="https://outlook.office.com/book/AgendaFabianaAstudillo@fabianaastudillo.com/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Calendar className="mr-2 h-4 w-4" />
+                {t.cta.bookNow}
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+            <Button
+              variant="outline"
+              size="lg"
+              className="rounded-full px-8 border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 bg-transparent"
+              asChild
+            >
+              <a
                 href="https://wa.me/593959744465"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 {t.cta.whatsapp}
-                <ArrowRight className="ml-2 h-4 w-4" />
               </a>
             </Button>
             <Button
