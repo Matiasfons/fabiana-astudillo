@@ -2,16 +2,14 @@
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
-import { Calendar, Clock, Video, MapPin, ExternalLink } from "lucide-react"
+import { Calendar, Clock, Video, MapPin } from "lucide-react"
 import { useLanguage } from "@/lib/i18n/language-context"
-import { useState } from "react"
 
 const MICROSOFT_BOOKINGS_URL =
   "https://outlook.office.com/book/AgendaFabianaAstudillo@fabianaastudillo.com/"
 
 export function Booking() {
   const { t } = useLanguage()
-  const [iframeLoaded, setIframeLoaded] = useState(false)
 
   const bookingOptions = [
     {
@@ -68,38 +66,10 @@ export function Booking() {
           ))}
         </div>
 
-        {/* Microsoft Bookings Embedded Calendar */}
-        <div className="max-w-4xl mx-auto mb-8">
-          <Card className="overflow-hidden border-border">
-            <CardContent className="p-0">
-              <div className="relative w-full" style={{ minHeight: "650px" }}>
-                {!iframeLoaded && (
-                  <div className="absolute inset-0 flex items-center justify-center bg-muted/50">
-                    <div className="text-center">
-                      <Calendar className="w-10 h-10 text-primary mx-auto mb-3 animate-pulse" />
-                      <p className="text-sm text-muted-foreground">
-                        {t.booking.loading}
-                      </p>
-                    </div>
-                  </div>
-                )}
-                <iframe
-                  src={MICROSOFT_BOOKINGS_URL}
-                  title={t.booking.calendarTitle}
-                  className="w-full border-0"
-                  style={{ height: "650px" }}
-                  onLoad={() => setIframeLoaded(true)}
-                />
-              </div>
-            </CardContent>
-          </Card>
-        </div>
-
         <div className="text-center">
           <Button
-            variant="outline"
-            size="sm"
-            className="rounded-full px-6"
+            size="lg"
+            className="rounded-full px-10 py-6 text-lg bg-primary text-primary-foreground hover:bg-primary/90"
             asChild
           >
             <a
@@ -107,11 +77,11 @@ export function Booking() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <ExternalLink className="mr-2 h-4 w-4" />
-              {t.booking.openExternal}
+              <Calendar className="mr-3 h-5 w-5" />
+              {t.booking.cta}
             </a>
           </Button>
-          <p className="mt-3 text-xs text-muted-foreground">
+          <p className="mt-4 text-sm text-muted-foreground">
             {t.booking.redirect}
           </p>
         </div>
