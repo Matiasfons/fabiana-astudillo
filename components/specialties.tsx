@@ -69,11 +69,6 @@ export function Specialties() {
 
   const populations = [
     {
-      title: t.specialties.populations.teens.title,
-      description: t.specialties.populations.teens.description,
-      icon: "🧑‍🎓",
-    },
-    {
       title: t.specialties.populations.youngAdults.title,
       description: t.specialties.populations.youngAdults.description,
       icon: "👩‍💼",
@@ -82,11 +77,6 @@ export function Specialties() {
       title: t.specialties.populations.adults.title,
       description: t.specialties.populations.adults.description,
       icon: "👨‍💻",
-    },
-    {
-      title: t.specialties.populations.seniors.title,
-      description: t.specialties.populations.seniors.description,
-      icon: "👵",
     },
   ]
 
@@ -138,11 +128,11 @@ export function Specialties() {
         </div>
 
         {/* Poblaciones atendidas */}
-        <div className="max-w-3xl mx-auto">
+        <div className="max-w-2xl mx-auto">
           <h3 className="font-serif text-2xl font-medium mb-8 text-center text-foreground">
             {t.specialties.populations.title}
           </h3>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {populations.map((pop) => (
               <div
                 key={pop.title}

@@ -17,7 +17,7 @@ export const translations = {
       title: "Psicóloga Clínica",
       name: "Fabiana Astudillo",
       description:
-        "Te acompaño en tu proceso de bienestar emocional con un enfoque científico, empático y basado en las terapias más actuales y efectivas.",
+        "Te acompaño a entender tus emociones y mejorar tus relaciones, con un enfoque científico, empático y basado en Terapia de Aceptación y Compromiso.",
       location: "Cuenca, Ecuador",
       online: "Atención Online",
       bookCta: "Agenda tu cita",
@@ -33,7 +33,7 @@ export const translations = {
       subtitle: "Sobre mí",
       title: "Comprometida con tu bienestar emocional",
       description:
-        "Soy Fabiana Astudillo, Psicóloga Clínica especializada en Terapias de Tercera Generación. Mi enfoque combina rigor científico con calidez humana para ofrecerte el mejor acompañamiento posible en tu proceso de crecimiento personal.",
+        "Soy Fabiana Astudillo, Psicóloga Clínica especializada en Terapias de Tercera Generación. Acompaño tu proceso con un enfoque científico y una atención cálida y humana, creando un espacio seguro para tu crecimiento personal.",
       values: {
         empathy: {
           title: "Empatía Genuina",
@@ -59,7 +59,7 @@ export const translations = {
       philosophy: {
         title: "Mi filosofía de trabajo",
         description:
-          "Creo firmemente que cada persona tiene la capacidad de transformar su vida. Mi rol es acompañarte en ese proceso, brindándote herramientas basadas en evidencia científica y un espacio de comprensión genuina. Las terapias de tercera generación me permiten ayudarte no solo a reducir el malestar, sino a construir una vida rica y significativa, alineada con tus valores más profundos.",
+          "Las terapias de tercera generación te ayudan a construir una vida con propósito, alineada con tus valores y lo que realmente quieres para ti.",
       },
     },
     // Credentials
@@ -195,7 +195,7 @@ export const translations = {
       subtitle: "Servicios",
       title: "¿Cómo puedo ayudarte?",
       description:
-        "Ofrezco diferentes modalidades de atención para adaptarme a tus necesidades específicas.",
+        "Ofrezco diferentes modalidades de atención para adaptarme a tus necesidades, tanto de manera presencial como virtual.",
       items: {
         individual: {
           title: "Psicoterapia Individual",
@@ -221,6 +221,11 @@ export const translations = {
           title: "Psicoterapia Online",
           description:
             "Sesiones virtuales por videollamada segura vía Meet, con la misma calidad y confidencialidad que la atención presencial.",
+        },
+        english: {
+          title: "Terapia en Inglés",
+          description:
+            "Sesiones de psicoterapia en inglés, ofreciendo el mismo acompañamiento profesional para personas de habla inglesa o quienes prefieran este idioma.",
         },
       },
     },
@@ -289,7 +294,7 @@ export const translations = {
       title: "Clinical Psychologist",
       name: "Fabiana Astudillo",
       description:
-        "I accompany you in your emotional wellness journey with a scientific, empathetic approach based on the most current and effective therapies.",
+        "I support you in understanding your emotions and improving your relationships, with a scientific, empathetic approach grounded in Acceptance and Commitment Therapy.",
       location: "Cuenca, Ecuador",
       online: "Online Care",
       bookCta: "Book your appointment",
@@ -305,7 +310,7 @@ export const translations = {
       subtitle: "About me",
       title: "Committed to your emotional well-being",
       description:
-        "I'm Fabiana Astudillo, a Clinical Psychologist specialized in Third Generation Therapies. My approach combines scientific rigor with human warmth to offer you the best possible support in your personal growth journey.",
+        "I'm Fabiana Astudillo, a Clinical Psychologist specialized in Third Generation Therapies. I accompany your process with a scientific approach and warm, human care, creating a safe space for your personal growth.",
       values: {
         empathy: {
           title: "Genuine Empathy",
@@ -331,7 +336,7 @@ export const translations = {
       philosophy: {
         title: "My work philosophy",
         description:
-          "I firmly believe that each person has the capacity to transform their life. My role is to accompany you in that process, providing you with evidence-based tools and a space of genuine understanding. Third generation therapies allow me to help you not only reduce distress, but to build a rich and meaningful life, aligned with your deepest values.",
+          "Third generation therapies help you build a purposeful life, aligned with your values and what you truly want for yourself.",
       },
     },
     // Credentials
@@ -467,7 +472,7 @@ export const translations = {
       subtitle: "Services",
       title: "How can I help you?",
       description:
-        "I offer different care modalities to adapt to your specific needs.",
+        "I offer different care modalities to adapt to your needs, both in person and virtually.",
       items: {
         individual: {
           title: "Individual Psychotherapy",
@@ -493,6 +498,11 @@ export const translations = {
           title: "Online Psychotherapy",
           description:
             "Virtual sessions via secure Meet video call, with the same quality and confidentiality as in-person care.",
+        },
+        english: {
+          title: "Therapy in English",
+          description:
+            "Psychotherapy sessions conducted in English, providing the same professional support for English speakers or those who prefer this language.",
         },
       },
     },

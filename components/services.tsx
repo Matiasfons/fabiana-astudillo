@@ -1,6 +1,6 @@
 "use client"
 
-import { User, Users, Baby, ClipboardList, Video } from "lucide-react"
+import { User, Users, Baby, ClipboardList, Video, Languages } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { useLanguage } from "@/lib/i18n/language-context"
 
@@ -33,6 +33,11 @@ export function Services() {
       title: t.services.items.online.title,
       description: t.services.items.online.description,
     },
+    {
+      icon: Languages,
+      title: t.services.items.english.title,
+      description: t.services.items.english.description,
+    },
   ]
 
   return (
@@ -51,12 +56,10 @@ export function Services() {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {services.map((service, index) => (
+          {services.map((service) => (
             <Card
               key={service.title}
-              className={`group border-border hover:border-primary/30 transition-all duration-300 overflow-hidden ${
-                index === 4 ? "md:col-span-2 lg:col-span-1" : ""
-              }`}
+              className="group border-border hover:border-primary/30 transition-all duration-300 overflow-hidden"
             >
               <CardContent className="p-8">
                 <div className="w-14 h-14 rounded-2xl bg-primary/10 flex items-center justify-center mb-6 group-hover:bg-primary/20 transition-colors">

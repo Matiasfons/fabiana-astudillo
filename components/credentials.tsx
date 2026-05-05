@@ -55,12 +55,12 @@ export function Credentials() {
     <section id="formacion" className="py-20 lg:py-32">
       <div className="container mx-auto px-4">
         <div className="max-w-3xl mx-auto text-center mb-16">
-          <p className="text-sm tracking-widest uppercase text-primary mb-4">
+          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-4 text-primary">
             {t.credentials.subtitle}
-          </p>
-          <h2 className="font-serif text-3xl md:text-4xl lg:text-5xl font-medium mb-6 text-foreground">
-            {t.credentials.title}
           </h2>
+          <p className="text-base md:text-lg font-medium mb-6 text-foreground">
+            {t.credentials.title}
+          </p>
           <p className="text-lg text-muted-foreground leading-relaxed">
             {t.credentials.description}
           </p>
